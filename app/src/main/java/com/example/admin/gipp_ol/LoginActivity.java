@@ -3,7 +3,6 @@ package com.example.admin.gipp_ol;
 import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;
 import android.annotation.TargetApi;
-import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.support.annotation.NonNull;
 import android.support.design.widget.Snackbar;
@@ -83,14 +82,11 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
             }
         });
 
-        Button mUserSignInButton = (Button) findViewById(R.id.sign_user);
-        mUserSignInButton.setOnClickListener(new View.OnClickListener() {
+        Button mEmailSignInButton = (Button) findViewById(R.id.email_sign_in_button);
+        mEmailSignInButton.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View view) {
-               // attemptLogin();
-                Intent logavaipromain = new Intent(LoginActivity.this, MainActivity.class);
-                startActivity(logavaipromain);
-
+                attemptLogin();
             }
         });
 
@@ -176,7 +172,7 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
             focusView = mUserView;
             cancel = true;
         } else if (!isUserValid(User)) {
-            mUserView.setError(getString(R.string.error_invalid_user));
+            mUserView.setError(getString(R.string.error_invalid_email));
             focusView = mUserView;
             cancel = true;
         }
