@@ -31,7 +31,6 @@
             android:label="@string/title_activity_main"
             android:parentActivityName=".LoginActivity"
             android:theme="@style/AppTheme.NoActionBar"></activity>
-        <activity android:name=".BarCodeActivity"></activity>
     </application>
 
 </manifest>
