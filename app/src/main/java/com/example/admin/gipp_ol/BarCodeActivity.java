@@ -68,7 +68,7 @@ public class BarCodeActivity extends AppCompatActivity {
     }
 
     private static Bitmap resizeImage (Context context,Bitmap bmpOriginal,float newWidth, float newHeight) {
-        Bitmap novoBmp = null;
+        Bitmap novoBmp;
 
         int w = bmpOriginal.getWidth();
         int h = bmpOriginal.getHeight();
@@ -89,13 +89,13 @@ public class BarCodeActivity extends AppCompatActivity {
         return novoBmp;
     }
 
-    public void girarFoto(View v) {
+    /*public void girarFoto(View v) {
         img.setRotation(90);
     }
 
     public void voltarFoto(View v){
         img.setRotation(0);
-    }
+    }*/
 
     public boolean onCreateOptionsMenu(Menu menu){
         getMenuInflater().inflate(R.menu.main, menu);
